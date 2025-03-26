@@ -34,7 +34,7 @@ function AddIteam() {
         try {
             // console.log('hhhhhhhhhhh');
             console.log(inputs);
-            const res = await axios.post('http://localhost:1700/addIteam', inputs, {
+            const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/addIteam`, inputs, {
                 //http://localhost:1700/addIteam
                 withCredentials: true
             });

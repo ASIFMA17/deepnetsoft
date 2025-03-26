@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,  useCallback} from 'react';
 import './productList.css';
 import { Link } from 'react-router-dom';
 
@@ -15,46 +15,31 @@ function ProductList() {
 
     const [data, setData] = useState([]);
 
-    const getIteam = async () => {
-
+    const getIteam = useCallback(async () => {
         try {
-            // console.log('hhhhhhhhhhh');
-            const res = await axios.get('http://localhost:1700/getIteam?category=Food', {
-                //'http://localhost:700/login'
+            const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/getIteam?category=Food`, {
                 withCredentials: true
             });
-            console.log(res);
             if (res.data.success) {
-                console.log(res.data.getIteam);
                 setData(res.data.getIteam);
-
                 toast.success(res.data.message);
-                console.log(res.data.message);
             }
-
         } catch (error) {
             console.log(error.response);
-            //toast.error(error.response.data.message);
         }
-
-        console.log(data);
-        
-
-    }
+    }, []); // Empty dependency array ensures `getIteam` is only created once
 
     useEffect(() => {
-        
         getIteam();
-
-    }, []); 
+    }, [getIteam]); // No infinite loop since `getIteam` is memoized
 
 
     const getDrinks = async () => {
 
         try {
             // console.log('hhhhhhhhhhh');
-            
-            const res = await axios.get('http://localhost:1700/getIteam?category=Drinks', {
+
+            const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/getIteam?category=Drinks`, {
                 //http://localhost:1700/getIteam?category=Drinks
                 //'http://localhost:700/login'
                 withCredentials: true
@@ -74,10 +59,10 @@ function ProductList() {
         }
 
         console.log(data);
-        
+
 
     }
-    
+
 
 
 
@@ -121,15 +106,6 @@ function ProductList() {
 
                             ))}
 
-
-
-                            <div>
-                                <div className='headPriceDiv'>
-                                    <h5 className='iteamHead'>CINNAMON TOAST CRUNCH</h5>
-                                    <h5 className='iteamHead'>$16</h5>
-                                </div>
-                                <span className='desc'>Skrewball peanut butter whiskey, vanilla extract, Amaretto, Baileys, egg white, cinnamon</span>
-                            </div>
 
 
                         </div>
