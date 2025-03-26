@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,  useCallback} from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './productList.css';
 import { Link } from 'react-router-dom';
 
@@ -14,10 +14,11 @@ import { toast } from 'react-toastify';
 function ProductList() {
 
     const [data, setData] = useState([]);
+    const [localContent, setLocalContent] = useState(false);
 
     const getIteam = useCallback(async () => {
         try {
-            const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/getIteam?category=Food`, {
+            const res = await axios.get(`http://localhost:1700/getIteam?category=Food`, {
                 withCredentials: true
             });
             if (res.data.success) {
@@ -39,7 +40,7 @@ function ProductList() {
         try {
             // console.log('hhhhhhhhhhh');
 
-            const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/getIteam?category=Drinks`, {
+            const res = await axios.get(`http://localhost:1700/getIteam?category=Drinks`, {
                 //http://localhost:1700/getIteam?category=Drinks
                 //'http://localhost:700/login'
                 withCredentials: true
@@ -107,6 +108,34 @@ function ProductList() {
                             ))}
 
 
+                            {localContent && (
+                                <>
+                                    <div>
+                                        <div className='headPriceDiv'>
+                                            <h5 className='iteamHead'>CINNAMON TOAST CRUNCH</h5>
+                                            <h5 className='iteamHead'>$16</h5>
+                                        </div>
+                                        <span className='desc'> Skrewball peanut butter whiskey, vanilla extract, Amaretto, Baileys, egg white, cinnamon</span>
+                                    </div>
+
+                                    <div>
+                                        <div className='headPriceDiv'>
+                                            <h5 className='iteamHead'>MOET SPRITZ</h5>
+                                            <h5 className='iteamHead'>$20</h5>
+                                        </div>
+                                        <span className='desc'> Aperol, St Germain, botanical liquor, fresh lime juice, mini brut Moet topper</span>
+                                    </div>
+
+                                    <div>
+                                        <div className='headPriceDiv'>
+                                            <h5 className='iteamHead'>BAR 42 MARY</h5>
+                                            <h5 className='iteamHead'>$14</h5>
+                                        </div>
+                                        <span className='desc'> Titos, tomato juice, worcestershire, celery salt, black pepper, tabasco, fully loaded</span>
+                                    </div>
+                                </>
+                            )}
+
 
                         </div>
 
@@ -131,7 +160,7 @@ function ProductList() {
                     <img src={Frame2} alt="" className='FrameIMG' />
                 </div>
 
-            </div>
+            </div >
         </>
     )
 }

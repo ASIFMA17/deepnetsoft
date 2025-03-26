@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoArrowBackCircle } from 'react-icons/io5';
 import axios from 'axios';
-//import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 function AddIteam() {
 
@@ -34,7 +34,7 @@ function AddIteam() {
         try {
             // console.log('hhhhhhhhhhh');
             console.log(inputs);
-            const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/addIteam`, inputs, {
+            const res = await axios.post(`http://localhost:1700/addIteam`, inputs, {
                 //http://localhost:1700/addIteam
                 withCredentials: true
             });
@@ -48,7 +48,7 @@ function AddIteam() {
 
         } catch (error) {
             console.log(error.response);
-            //toast.error(error.response.data.message);
+            toast.error(error.response.data.message);
         }
 
 
