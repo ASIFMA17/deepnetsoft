@@ -1,0 +1,171 @@
+.img1Div{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.img1{
+    width: 100%;
+    height: 200px;
+}
+
+.textDiv{
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 26%;
+    right: 26%;
+    text-align: center;
+    align-items: center;
+}
+
+.menuHead{
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    font-size: 60px;
+}
+
+.text{
+    color: #BBBBBB;
+    font-size: 15px;
+}
+
+.img2Div{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.img2{
+    width: 100%;
+    height: 60px;
+}
+
+.buttonDiv{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    top: 15%;
+}
+
+.button{
+    padding: 7px 10px 10px 7px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #0796EF;
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.button:hover{
+    background-color: #0796EF !important;
+}
+
+@media screen and (max-width:1100px) {
+    
+    .textDiv{
+        left: 23%;
+        right: 23%;
+    }
+
+    .menuHead{
+        font-size: 55px;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    
+    .textDiv{
+        left: 20%;
+        right: 20%;
+    }
+
+    .menuHead{
+        font-size: 50px;
+    }
+
+    .text{
+        font-size: 14px;
+    }
+
+    .button{
+        padding: 5px 7px 7px 5px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .menuHead{
+        font-size: 45px;
+    }
+    
+    .textDiv{
+        left: 18%;
+        right: 18%;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .menuHead{
+        font-size: 40px;
+    }
+    
+    .textDiv{
+        left: 14%;
+        right: 14%;
+        top: 35px;
+    }
+
+    .text{
+        font-size: 13px;
+    }
+
+    .button{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    
+    .textDiv{
+        left: 10%;
+        right: 10%;
+    }
+
+    .text{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .menuHead{
+        font-size: 35px;
+    }
+    
+    .textDiv{
+        left: 8%;
+        right: 8%;
+    }
+
+    .text{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    
+    .textDiv{
+        left: 6%;
+        right: 6%;
+    }
+
+}

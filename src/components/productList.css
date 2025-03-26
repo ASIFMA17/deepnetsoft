@@ -1,0 +1,303 @@
+.totalDiv {
+    display: flex;
+    background: #121618;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.frameDiv {
+    flex: 1;
+}
+
+.frameIMG {
+    width: 100%;
+    height: 500px;
+}
+
+.centerDiv {
+    flex: 10;
+}
+
+.boxDiv {
+    border: solid 1px #ffffff;
+    width: 100%;
+    padding: 40px;
+    top: 15%;
+    position: relative;
+}
+
+.twoIteamDiv {
+    margin-top: 20px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.branchHead {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.headPriceDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iteamHead {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.desc {
+    font-size: 15px;
+    color: #bbbbbb;
+}
+
+.IMG {
+    width: 130px;
+    height: 130px;
+}
+
+.topImgDiv {
+    position: absolute;
+    left: -30px;
+    top: -100px;
+}
+
+.bottomImgDiv {
+    position: absolute;
+    right: -30px;
+    bottom: -100px;
+}
+
+.addButtonDiv{
+    position: absolute;
+    right: 10px;
+    top: -40px;
+}
+
+.addButton{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 7px;
+    padding-left: 7px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 6px;
+    border: solid 1px #0796EF;
+    text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
+
+    .boxDiv {
+        padding: 35px;
+    }
+
+    .centerDiv {
+        flex: 11;
+    }
+}
+
+@media screen and (max-width:1100px) {
+
+    .branchHead {
+        font-size: 34px;
+    }
+
+    .iteamHead {
+        font-size: 16px;
+    }
+
+    .twoIteamDiv {
+        gap: 35px;
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+
+    .boxDiv {
+        padding: 25px;
+    }
+
+    .twoIteamDiv {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .frameDiv {
+        display: none;
+    }
+
+    .totalDiv {
+        display: block;
+        padding-left: 75px !important;
+        padding-right: 75px !important;
+    }
+
+    .centerDiv {
+        height: 550px;
+    }
+
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    .totalDiv {
+        display: block;
+        padding-left: 65px !important;
+        padding-right: 65px !important;
+    }
+
+    .branchHead {
+        font-size: 30px;
+    }
+
+    .iteamHead {
+        font-size: 15px;
+    }
+
+    .twoIteamDiv {
+        gap: 25px;
+    }
+
+    .desc{
+        font-size: 14px;
+    }
+
+
+}
+
+@media screen and (max-width:750px) {
+
+    .totalDiv {
+        display: block;
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+
+
+}
+
+@media screen and (max-width:700px) {
+
+    .totalDiv {
+        display: block;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    .IMG {
+        width: 120px;
+        height: 120px;
+    }
+
+    .branchHead {
+        font-size: 27px;
+    }
+
+    .iteamHead {
+        font-size: 14px;
+    }
+
+
+}
+
+@media screen and (max-width:650px) {
+
+    .totalDiv {
+        display: block;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .boxDiv {
+        padding: 20px;
+    }
+
+    .twoIteamDiv{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .centerDiv{
+        height: 610px;
+    }
+
+
+}
+
+@media screen and (max-width:576px) {
+
+    .totalDiv {
+        display: block;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .boxDiv {
+        padding: 20px;
+        top: 10%;
+    }
+
+
+    .topImgDiv {
+        position: absolute;
+        left: -15px;
+        top: -100px;
+    }
+    
+    .bottomImgDiv {
+        position: absolute;
+        right: -15px;
+        bottom: -100px;
+    }
+
+    .branchHead {
+        font-size: 23px;
+    }
+
+    .iteamHead {
+        font-size: 13px;
+    }
+
+    .desc{
+        font-size: 13px;
+    }
+
+    .IMG {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .desc{
+        font-size: 12px;
+    }
+
+    .totalDiv {
+        display: block;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+}
+
+@media screen and (max-width:360px){
+    
+    .centerDiv{
+        height: 670px;
+    }
+}
