@@ -24,6 +24,8 @@ function ProductList() {
             if (res.data.success) {
                 setData(res.data.getIteam);
                 toast.success(res.data.message);
+            }else{
+                setLocalContent(true);
             }
         } catch (error) {
             console.log(error.response);
@@ -52,6 +54,8 @@ function ProductList() {
 
                 toast.success(res.data.message);
                 console.log(res.data.message);
+            }else{
+                setLocalContent(true);
             }
 
         } catch (error) {
